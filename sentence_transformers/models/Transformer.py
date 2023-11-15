@@ -63,7 +63,7 @@ class Transformer(nn.Module):
         self.auto_model = MT5EncoderModel.from_pretrained(model_name_or_path, config=config, cache_dir=cache_dir, **model_args)
 
     def __repr__(self):
-        return "Transformer({}) with Transformer model: {} ".format(self.get_config_dict(), self.auto_model.__class__.__name__)
+        return "Transformer({}) with Transformer model: {}".format(self.get_config_dict(), self.auto_model.__class__.__name__)
 
     def forward(self, features):
         """Returns token_embeddings, cls_token"""
